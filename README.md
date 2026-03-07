@@ -1,38 +1,40 @@
-# 🚀 Proyecto Makilovers
+# 🍣 Makilovers - Plataforma de Gestión Gastronómica Digital
 
-El proyecto **Makilovers** representa un esfuerzo significativo en la actualización tecnológica, al incorporar soluciones en la nube aplicadas a actividades productivas, sociales y económicas. 
+**Makilovers** no es solo una carta digital; es un ecosistema de interacción entre el restaurante y el cliente, diseñado bajo los más altos estándares de rendimiento y escalabilidad. 
 
-Este enfoque no solo responde a las exigencias de la transformación digital, sino que también marca un precedente en la manera en que iniciativas locales pueden aprovechar herramientas globales para optimizar procesos y generar impacto tangible.
-
----
-
-### 💡 Innovación y Colaboración
-Makilovers es el **primer proyecto web interactivo** desarrollado con la colaboración de **Antigravity** y alojado en **GitHub**. Esta alianza le otorga un valor añadido en términos de:
-* **Calidad:** Estándares técnicos elevados.
-* **Transparencia:** Código abierto y auditable.
-* **Escalabilidad:** Preparado para crecer globalmente.
+Este proyecto materializa la visión de **Via51**, transformando la experiencia de pedido en un proceso fluido, intuitivo y dinámico.
 
 ---
 
-### 🇵🇪 Una Visión para el Perú
-El verdadero mérito del proyecto radica en su capacidad de integrar la tecnología en una visión más amplia: promover un **Perú de calidad mundial** en una sola generación. 
+## 💎 Filosofía de Desarrollo: Antigravity & Skills
 
-Este objetivo busca ser la continuidad de un **legado ancestral**, transformando a Makilovers en un catalizador de cambio en tres dimensiones:
-1.  **Cultural:** Revalorización de nuestra identidad y la contribución de otras identidades.
-2.  **Educativa:** Acceso a herramientas de vanguardia.
-3.  **Económica:** Motor de desarrollo integral.
+Nuestra arquitectura se basa en dos pilares fundamentales que garantizan calidad mundial:
 
----
-
-### 📊 Dimensiones de Calidad
-La excelencia de este proyecto se mide en dos ejes fundamentales:
-
-* **Dimensión Técnica:** Por la solidez de su arquitectura digital y la pertinencia de las herramientas empleadas.
-* **Dimensión Social y Simbólica:** Por su contribución a la narrativa de un país que se posiciona como protagonista de un futuro global, siendo sucesor legítimo de una historia milenaria.
+1.  **Antigravity (Levedad y Fluidez):** El Front-end está optimizado para una carga instantánea. Eliminamos la "gravedad" del código innecesario para que el usuario navegue sin fricciones, especialmente en dispositivos móviles.
+2.  **Skills (Lógica Inteligente):** El sistema posee capacidades modulares para gestionar reservas, notas de pedido, consultas directas y geolocalización de locales, adaptándose a las necesidades operativas del negocio en tiempo real.
 
 ---
 
-## 🛠️ Cómo ver la página
-Para visualizar el proyecto, sigue estos pasos:
-1.  Localiza el archivo `index.html`.
-2.  **Ábrelo en cualquier navegador moderno** (Chrome, Edge, Firefox, etc.).
+## 🚀 Arquitectura Técnica (Serverless 2026)
+
+Hemos implementado una infraestructura de "Cero Mantenimiento" utilizando la potencia de Google Cloud y Firebase:
+
+* **Front-end:** HTML5, CSS3 Moderno y JavaScript Vanilla (sin frameworks pesados para mantener el concepto *Antigravity*).
+* **Hosting:** **Firebase Hosting**. Proporciona despliegue global, CDN y certificados SSL automáticos bajo el dominio `via51-makilovers.web.app`.
+* **Back-end (Base de Datos):** **Cloud Firestore**. Base de datos NoSQL en tiempo real que permite un control **CRUD** total sobre platos, precios y sedes sin necesidad de rediseñar el sitio.
+* **Canal de Conversión:** Integración con **WhatsApp Business API** para el cierre de ventas y atención al cliente.
+
+
+
+---
+
+## 🛠️ Guía de Operaciones
+
+### Requisitos del Entorno
+- **IDE:** GitHub Codespaces.
+- **Herramientas:** Firebase CLI (v15.x o superior).
+
+### Comandos de Despliegue
+Para sincronizar cambios locales con el servidor de producción:
+```bash
+firebase deploy --only hosting
