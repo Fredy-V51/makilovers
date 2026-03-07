@@ -1,40 +1,29 @@
-# 🍣 Makilovers - Plataforma de Gestión Gastronómica Digital
+# 🍣 Makilovers: Ecosistema Gastronómico Digital
 
-**Makilovers** no es solo una carta digital; es un ecosistema de interacción entre el restaurante y el cliente, diseñado bajo los más altos estándares de rendimiento y escalabilidad. 
-
-Este proyecto materializa la visión de **Via51**, transformando la experiencia de pedido en un proceso fluido, intuitivo y dinámico.
+**Makilovers** es una plataforma de interacción de alta fidelidad que redefine la experiencia entre el restaurante y el cliente mediante una arquitectura **Serverless Cloud**. Diseñada bajo los principios de innovación de **Via51**.
 
 ---
 
-## 💎 Filosofía de Desarrollo: Antigravity & Skills
+## 💎 ADN del Proyecto: Antigravity & Skills
 
-Nuestra arquitectura se basa en dos pilares fundamentales que garantizan calidad mundial:
+### 🚀 Antigravity (Rendimiento Sin Peso)
+Nuestra metodología elimina la fricción técnica para lograr una fluidez extrema:
+- **Infraestructura:** Ejecución 100% en la nube mediante **GitHub Codespaces**, eliminando la dependencia de hardware físico.
+- **Frontend:** Código optimizado que vuela sobre la red global de **Firebase Hosting**, garantizando cargas instantáneas en dispositivos móviles.
 
-1.  **Antigravity (Levedad y Fluidez):** El Front-end está optimizado para una carga instantánea. Eliminamos la "gravedad" del código innecesario para que el usuario navegue sin fricciones, especialmente en dispositivos móviles.
-2.  **Skills (Lógica Inteligente):** El sistema posee capacidades modulares para gestionar reservas, notas de pedido, consultas directas y geolocalización de locales, adaptándose a las necesidades operativas del negocio en tiempo real.
-
----
-
-## 🚀 Arquitectura Técnica (Serverless 2026)
-
-Hemos implementado una infraestructura de "Cero Mantenimiento" utilizando la potencia de Google Cloud y Firebase:
-
-* **Front-end:** HTML5, CSS3 Moderno y JavaScript Vanilla (sin frameworks pesados para mantener el concepto *Antigravity*).
-* **Hosting:** **Firebase Hosting**. Proporciona despliegue global, CDN y certificados SSL automáticos bajo el dominio `via51-makilovers.web.app`.
-* **Back-end (Base de Datos):** **Cloud Firestore**. Base de datos NoSQL en tiempo real que permite un control **CRUD** total sobre platos, precios y sedes sin necesidad de rediseñar el sitio.
-* **Canal de Conversión:** Integración con **WhatsApp Business API** para el cierre de ventas y atención al cliente.
-
-
+### 🧠 Skills (Capacidades Inteligentes)
+El sistema evoluciona mediante módulos funcionales conectados a **Cloud Firestore**:
+- **Skill de Catálogo:** Gestión de platos y precios en tiempo real.
+- **Skill de Sedes:** Control de geolocalización y contacto (WhatsApp Business API).
+- **Skill de Reservas:** Módulo proyectado para la gestión de aforo dinámico.
 
 ---
 
-## 🛠️ Guía de Operaciones
+## 🏗️ Arquitectura Técnica 2026
+- **Stack:** HTML5 / CSS3 / JavaScript Vanilla.
+- **Cloud Provider:** Google Cloud & Firebase.
+- **Database:** Cloud Firestore (NoSQL).
+- **Deployment:** `firebase deploy --only hosting`
 
-### Requisitos del Entorno
-- **IDE:** GitHub Codespaces.
-- **Herramientas:** Firebase CLI (v15.x o superior).
-
-### Comandos de Despliegue
-Para sincronizar cambios locales con el servidor de producción:
-```bash
-firebase deploy --only hosting
+---
+> **Documentación integrada y actualizada al 2026 - Propiedad de Via51.**
