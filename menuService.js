@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
-// opcional Firestore
-let admin;
+const { getFirestore, isFirebaseAvailable } = require('./firebaseConfig');
 
 /**
  * Servicio de menú para Makilovers
@@ -12,18 +10,7 @@ class MenuService {
     constructor() {
         this.menuPath = path.join(__dirname, 'menu.json');
         this.menuData = null;
-
-        // Si se activa la lectura desde Firestore mediante variable de entorno
         this.useFirestore = process.env.USE_FIRESTORE === 'true';
-        if (this.useFirestore) {
-            admin = admin || require('firebase-admin');
-            if (!admin.apps.length) {
-                admin.initializeApp({
-                    credential: admin.credential.applicationDefault()
-                });
-            }
-            this.db = admin.firestore();
-        }
     }
 
     /**
@@ -57,8 +44,14 @@ class MenuService {
 
     async _cargarMenuFirestore() {
         if (this.menuData) return this.menuData;
+        
+        const db = getFirestore();
+        if (!db) {
+            throw new Error('Firestore no está disponible. Verifica GOOGLE_APPLICATION_CREDENTIALS y USE_FIRESTORE');
+        }
+
         try {
-            const snapshot = await this.db.collection('menu').get();
+            const snapshot = await db.collection('menu').get();
             const data = {};
             snapshot.forEach(doc => {
                 data[doc.id] = doc.data();

@@ -1,8 +1,12 @@
+// Cargar variables de entorno desde .env
+require('dotenv').config();
+
 const express = require('express');
 const menuService = require('./menuService');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(__dirname));
 
 app.get('/categorias', async (req, res) => {
     try {
