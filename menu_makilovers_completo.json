@@ -3,10 +3,9 @@
     "generado": "2026-03-08",
     "version": "1.0",
     "fuente": "Digital Carta Makilovers v01.12 - PDF",
-    "total_productos": 0,
+    "total_productos": 14,
     "nota": "Este JSON será el origen de verdad para Firestore. Se incluyen descripciones, precios completos y características del producto."
   },
-  
   "marca": {
     "nombre": "Makilovers",
     "tagline": "Sabores que hacen los momentos inolvidables",
@@ -35,7 +34,6 @@
       }
     ]
   },
-
   "categorias": [
     {
       "id": "entradas",
@@ -80,7 +78,6 @@
       "descripcion": "Ofertas especiales para compartir"
     }
   ],
-
   "productos": {
     "entradas_sashimi": [
       {
@@ -92,8 +89,8 @@
         "caracteres_desc": 75,
         "presentacion": "4 cortes",
         "precio": {
-          "venta": 18.00,
-          "costo_estimado": 7.20,
+          "venta": 18.0,
+          "costo_estimado": 7.2,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -102,8 +99,13 @@
           "cualitativo": "Premium, fresco",
           "cuantitativo": "4 piezas de 50g cada una"
         },
-        "alergenos": ["pescado"],
-        "apto_para": ["omnivoros", "sin_gluten"],
+        "alergenos": [
+          "pescado"
+        ],
+        "apto_para": [
+          "omnivoros",
+          "sin_gluten"
+        ],
         "disponibilidad": true,
         "imagen": {
           "existe_en_disco": false,
@@ -120,8 +122,8 @@
         "caracteres_desc": 68,
         "presentacion": "4 cortes",
         "precio": {
-          "venta": 15.00,
-          "costo_estimado": 6.00,
+          "venta": 15.0,
+          "costo_estimado": 6.0,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -130,8 +132,13 @@
           "cualitativo": "Fresco, tierno",
           "cuantitativo": "4 cortes de 50g"
         },
-        "alergenos": ["pescado"],
-        "apto_para": ["omnivoros", "sin_gluten"],
+        "alergenos": [
+          "pescado"
+        ],
+        "apto_para": [
+          "omnivoros",
+          "sin_gluten"
+        ],
         "disponibilidad": true,
         "imagen": {
           "existe_en_disco": false,
@@ -147,8 +154,8 @@
         "caracteres_desc": 76,
         "presentacion": "4 cortes",
         "precio": {
-          "venta": 20.00,
-          "costo_estimado": 8.00,
+          "venta": 20.0,
+          "costo_estimado": 8.0,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -157,12 +164,69 @@
           "cualitativo": "Suave, fresco",
           "cuantitativo": "4 cortes de 50g"
         },
-        "alergenos": ["pescado"],
-        "apto_para": ["omnivoros", "sin_gluten"],
+        "alergenos": [
+          "pescado"
+        ],
+        "apto_para": [
+          "omnivoros",
+          "sin_gluten"
+        ],
         "disponibilidad": true
       }
     ],
-
+    "bebidas": [
+      {
+        "sku": "BEB-REF-INC-01",
+        "nombre": "Inca Kola",
+        "subcategoria": "Refresco",
+        "descripcion_corta": "Refresco peruano clásico",
+        "descripcion_larga": "Inca Kola, el sabor del Perú en una botella refrescante.",
+        "caracteres_desc": 55,
+        "presentacion": "355ml",
+        "precio": {
+          "venta": 5.0,
+          "costo_estimado": 2.0,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Orgullo peruano",
+          "cualitativo": "Dulce, refrescante",
+          "cuantitativo": "355ml"
+        },
+        "alergenos": [],
+        "apto_para": [
+          "todos"
+        ],
+        "disponibilidad": true
+      },
+      {
+        "sku": "BEB-TEA-VER-01",
+        "nombre": "Té Verde",
+        "subcategoria": "Té",
+        "descripcion_corta": "Té verde natural",
+        "descripcion_larga": "Té verde premium, perfecto para acompañar tus comidas.",
+        "caracteres_desc": 52,
+        "presentacion": "250ml",
+        "precio": {
+          "venta": 4.0,
+          "costo_estimado": 1.6,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Bienestar natural",
+          "cualitativo": "Natural, saludable",
+          "cuantitativo": "250ml"
+        },
+        "alergenos": [],
+        "apto_para": [
+          "todos",
+          "sin_gluten"
+        ],
+        "disponibilidad": true
+      }
+    ],
     "entradas_alitas": [
       {
         "sku": "ENT-ALI-BBQ-01",
@@ -173,8 +237,8 @@
         "caracteres_desc": 76,
         "presentacion": "6 unidades",
         "precio": {
-          "venta": 20.00,
-          "costo_estimado": 8.00,
+          "venta": 20.0,
+          "costo_estimado": 8.0,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -183,8 +247,12 @@
           "cualitativo": "Empanizado, sabroso",
           "cuantitativo": "6 alitas de 50g c/u"
         },
-        "alergenos": ["gluten"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "gluten"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
         "disponibilidad": true
       },
       {
@@ -196,8 +264,8 @@
         "caracteres_desc": 77,
         "presentacion": "6 unidades",
         "precio": {
-          "venta": 20.00,
-          "costo_estimado": 8.00,
+          "venta": 20.0,
+          "costo_estimado": 8.0,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -206,12 +274,16 @@
           "cualitativo": "Glazeado, umami",
           "cuantitativo": "6 alitas de 50g"
         },
-        "alergenos": ["soya", "gluten"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "soya",
+          "gluten"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
         "disponibilidad": true
       }
     ],
-
     "sopas_ramen": [
       {
         "sku": "SOP-RAM-CAS-01",
@@ -225,14 +297,14 @@
         "precios_multiples": {
           "mediano": {
             "peso": "350g",
-            "venta": 24.00,
-            "costo_estimado": 9.60,
+            "venta": 24.0,
+            "costo_estimado": 9.6,
             "margen_porcentaje": 60
           },
           "grande": {
             "peso": "500g",
-            "venta": 32.00,
-            "costo_estimado": 12.80,
+            "venta": 32.0,
+            "costo_estimado": 12.8,
             "margen_porcentaje": 60
           }
         },
@@ -242,8 +314,13 @@
           "cualitativo": "Tradicional, casero",
           "cuantitativo": "350g mediano / 500g grande"
         },
-        "alergenos": ["gluten", "soya"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "gluten",
+          "soya"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
         "disponibilidad": true,
         "imagen": {
           "existe_en_disco": false,
@@ -262,14 +339,14 @@
         "precios_multiples": {
           "mediano": {
             "peso": "380g",
-            "venta": 26.00,
-            "costo_estimado": 10.40,
+            "venta": 26.0,
+            "costo_estimado": 10.4,
             "margen_porcentaje": 60
           },
           "grande": {
             "peso": "550g",
-            "venta": 34.00,
-            "costo_estimado": 13.60,
+            "venta": 34.0,
+            "costo_estimado": 13.6,
             "margen_porcentaje": 60
           }
         },
@@ -279,12 +356,57 @@
           "cualitativo": "Premium, generoso",
           "cuantitativo": "380g mediano / 550g grande"
         },
-        "alergenos": ["gluten", "soya", "pescado", "mariscos"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "gluten",
+          "soya",
+          "pescado",
+          "mariscos"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
+        "disponibilidad": true
+      },
+      {
+        "sku": "SOP-RAM-TAN-01",
+        "nombre": "Tantanmen Ramen",
+        "categoria_padre": "Ramen picante",
+        "subcategoria": "Ramen",
+        "descripcion_corta": "Ramen con salsa de sésamo picante y cerdo",
+        "descripcion_larga": "El secreto está en la salsa de la casa. Fideos, champiñones y cerdo cocido que te harán cerrar los ojos con cada bocado.",
+        "caracteres_desc": 78,
+        "presentacion": "M/L",
+        "precios_multiples": {
+          "mediano": {
+            "peso": "380g",
+            "venta": 27.0,
+            "costo_estimado": 10.8,
+            "margen_porcentaje": 60
+          },
+          "grande": {
+            "peso": "550g",
+            "venta": 35.0,
+            "costo_estimado": 14.0,
+            "margen_porcentaje": 60
+          }
+        },
+        "moneda": "PEN",
+        "componentes_marca": {
+          "emotional": "Fuego asiático",
+          "cualitativo": "Picante, cremoso",
+          "cuantitativo": "380g mediano / 550g grande"
+        },
+        "alergenos": [
+          "gluten",
+          "soya",
+          "sesamo"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
         "disponibilidad": true
       }
     ],
-
     "makis_frios": [
       {
         "sku": "MAK-FRI-ACE-01",
@@ -295,8 +417,8 @@
         "caracteres_desc": 78,
         "presentacion": "8 piezas",
         "precio": {
-          "venta": 28.00,
-          "costo_estimado": 11.20,
+          "venta": 28.0,
+          "costo_estimado": 11.2,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -305,8 +427,14 @@
           "cualitativo": "Crujiente, fresco, picante",
           "cuantitativo": "8 piezas, 200g total"
         },
-        "alergenos": ["pescado", "mariscos", "gluten"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "pescado",
+          "mariscos",
+          "gluten"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
         "disponibilidad": true
       },
       {
@@ -318,8 +446,8 @@
         "caracteres_desc": 76,
         "presentacion": "8 piezas",
         "precio": {
-          "venta": 25.00,
-          "costo_estimado": 10.00,
+          "venta": 25.0,
+          "costo_estimado": 10.0,
           "margen_porcentaje": 60,
           "moneda": "PEN"
         },
@@ -328,13 +456,74 @@
           "cualitativo": "Suave, fresco",
           "cuantitativo": "8 piezas, 180g total"
         },
-        "alergenos": ["pescado", "lacteos", "sesamo"],
-        "apto_para": ["omnivoros"],
+        "alergenos": [
+          "pescado",
+          "lacteos",
+          "sesamo"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
+        "disponibilidad": true
+      },
+      {
+        "sku": "MAK-FRI-CAL-01",
+        "nombre": "California Roll",
+        "subcategoria": "Makis Fríos",
+        "descripcion_corta": "Palta, pepino y cangrejo con mayonesa",
+        "descripcion_larga": "Roll californiano clásico con palta fresca, pepino crujiente y cangrejo, cubierto con mayonesa.",
+        "caracteres_desc": 78,
+        "presentacion": "8 piezas",
+        "precio": {
+          "venta": 22.0,
+          "costo_estimado": 8.8,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Clásico americano",
+          "cualitativo": "Crujiente, cremoso",
+          "cuantitativo": "8 piezas, 160g total"
+        },
+        "alergenos": [
+          "mariscos",
+          "lacteos"
+        ],
+        "apto_para": [
+          "omnivoros"
+        ],
+        "disponibilidad": true
+      },
+      {
+        "sku": "MAK-FRI-SPT-01",
+        "nombre": "Spicy Tuna Roll",
+        "subcategoria": "Makis Fríos",
+        "descripcion_corta": "Atún picante con cebolla y cilantro",
+        "descripcion_larga": "Atún fresco picado con cebolla roja, cilantro y salsa spicy. Para amantes del picante.",
+        "caracteres_desc": 79,
+        "presentacion": "8 piezas",
+        "precio": {
+          "venta": 24.0,
+          "costo_estimado": 9.6,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Fuego controlado",
+          "cualitativo": "Picante, fresco",
+          "cuantitativo": "8 piezas, 170g total"
+        },
+        "alergenos": [
+          "pescado"
+        ],
+        "apto_para": [
+          "omnivoros",
+          "sin_gluten"
+        ],
         "disponibilidad": true
       }
     ]
   },
-
   "estadisticas_preliminares": {
     "total_categorias": 5,
     "total_subcategorias": 8,
