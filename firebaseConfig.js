@@ -19,6 +19,24 @@ function initializeFirebase() {
     }
 
     try {
+        // Si estamos usando el emulador
+        if (process.env.FIRESTORE_EMULATOR_HOST) {
+            console.log('🔧 Usando Firestore Emulator:', process.env.FIRESTORE_EMULATOR_HOST);
+            if (!admin.apps.length) {
+                admin.initializeApp({
+                    projectId: 'makilovers-dev'
+                });
+            }
+            db = admin.firestore();
+            db.settings({
+                host: process.env.FIRESTORE_EMULATOR_HOST.split(':')[0],
+                port: parseInt(process.env.FIRESTORE_EMULATOR_HOST.split(':')[1]),
+                ssl: false
+            });
+            initialized = true;
+            return db;
+        }
+
         // Verificar que la variable de entorno esté configurada
         if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
             console.warn(
@@ -64,8 +82,16 @@ function isFirebaseAvailable() {
     return process.env.USE_FIRESTORE === 'true' && getFirestore() !== null;
 }
 
+/**
+ * Verifica si estamos en modo mock (para testing)
+ */
+function isMockMode() {
+    return process.env.USE_FIRESTORE === 'false' || getFirestore() === null;
+}
+
 module.exports = {
     initializeFirebase,
     getFirestore,
-    isFirebaseAvailable
+    isFirebaseAvailable,
+    isMockMode
 };

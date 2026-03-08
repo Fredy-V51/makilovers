@@ -12,15 +12,20 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
-const { getFirestore, isFirebaseAvailable } = require('../firebaseConfig');
+const { getFirestore, isFirebaseAvailable, isMockMode } = require('../firebaseConfig');
 
 class MenuUploader {
     constructor() {
         this.db = getFirestore();
-        if (!this.db) {
+        this.mockMode = !this.db || process.env.USE_FIRESTORE === 'false';
+        
+        if (this.mockMode) {
+            console.log('🔧 MODO MOCK ACTIVADO - Simulando carga a Firestore');
+        } else if (!this.db) {
             console.error('❌ Firestore no disponible. Verifica las credenciales.');
             process.exit(1);
         }
+        
         this.stats = {
             productos: 0,
             skus: 0,
@@ -53,6 +58,13 @@ class MenuUploader {
         try {
             console.log('📝 Cargando metadatos de marca...');
             
+            if (this.mockMode) {
+                console.log('🔧 MOCK: Metadatos de marca simulados');
+                console.log(`   - Nombre: ${metadata.nombre || 'Makilovers'}`);
+                console.log(`   - Ubicaciones: ${metadata.ubicaciones?.length || 0}`);
+                return;
+            }
+
             const brandRef = this.db.collection('metadata').doc('brand');
             await brandRef.set({
                 nombre: metadata.nombre || 'Makilovers',
@@ -95,6 +107,18 @@ class MenuUploader {
 
             if (!sku) {
                 console.warn(`⚠️  Producto sin SKU: ${nombre}`);
+                return;
+            }
+
+            if (this.mockMode) {
+                console.log(`🔧 MOCK: Producto ${sku} - ${nombre}`);
+                this.stats.productos++;
+                // Simular carga de SKUs
+                if (producto.precios_multiples) {
+                    this.stats.skus += Object.keys(producto.precios_multiples).length;
+                } else {
+                    this.stats.skus += 1;
+                }
                 return;
             }
 
@@ -284,7 +308,7 @@ class MenuUploader {
 
 // Ejecutar
 async function main() {
-    if (!isFirebaseAvailable()) {
+    if (!isFirebaseAvailable() && !isMockMode()) {
         console.error('❌ Firebase no está configurado correctamente.');
         console.error('Verifica GOOGLE_APPLICATION_CREDENTIALS y USE_FIRESTORE');
         process.exit(1);
