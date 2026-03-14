@@ -1,0 +1,115 @@
+/* Nodo: Makilovers - Ropaje de Autoridad */
+:root {
+    --bg-color: #ffffff;
+    --text-main: #0a0a0a;
+    --accent: #d4a373; /* Un toque de sobriedad que evoca origen y calidad */
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corrección de Ejes */
+header, footer {
+    border-bottom: 2px solid var(--text-main);
+    padding: 2rem 2rem; /* Eliminamos el padding lateral excesivo */
+}
+
+/* Forzamos que el contenido de header y footer respete el mismo ancho del main */
+header > div, footer > div, main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Ajuste específico para el footer */
+footer {
+    border-bottom: none; /* Quitamos la línea inferior si no la quieres */
+    border-top: 2px solid var(--text-main); /* Esta es la línea que precede al footer */
+    margin-top: 4rem;
+}
+
+/* Centrado de texto en header y footer */
+header .divisa, footer .cierre {
+    text-align: center;
+}
+
+.divisa, .cierre {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    opacity: 0.7;
+}
+
+main {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin-bottom: 3rem;
+}
+
+.frecuencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+}
+
+.frecuencias p {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.frecuencias strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--accent);
+}
+
+#vinculo-ecosistema {
+    margin-top: 6rem;
+    padding: 4rem 0;
+    border-top: 1px double var(--text-main); /* Una línea doble para marcar jerarquía */
+}
+
+.proposito h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-vinculo {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.cta-vinculo:hover {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+}
