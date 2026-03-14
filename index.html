@@ -1,13 +1,1 @@
-<script>
-    // Forzar limpieza de ruta
-    const host = window.location.hostname;
-    
-    // Log para depuración (abre F12 > Consola para ver esto)
-    console.log("Detectado host:", host);
-
-    if (host.includes('dev.')) {
-        window.location.replace('./desarrollo/index.html');
-    } else {
-        window.location.replace('./produccion/index.html');
-    }
-</script>
+<meta http-equiv="refresh" content="0; url=./produccion/index.html">
